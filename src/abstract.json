@@ -21,14 +21,6 @@
         }
       },
       {
-        "title": "Bloch F (2005) Group and network formation in industrial organization: A survey. Demange G, Wooders M, eds. Group Formation in Economics: Networks, Clubs and Coalitions (Cambridge University Press, Cambridge, UK), 335-353.Google Scholar",
-        "abstract": {
-          "en": "",
-          "zh": "",
-          "url": "https://web.archive.org/web/20030630132434id_/http://durandal.cnrs-mrs.fr:80/PP/bloch/papers/coaliobook.pdf"
-        }
-      },
-      {
         "title": "Corbett CJ, Karmarkar US (2001) Competition and structure in serial supply chains with deterministic demand. Management Sci. 47(7):966-978.",
         "abstract": {
           "en": "Supply chains often consist of several tiers, with different numbers of firms competing at each tier. A major determinant of the structure of supply chains is the cost structure associated with the underlying manufacturing process. In this paper, we examine the impact of fixed and variable costs on the structure and competitiveness of supply chains with a serial structure and price-sensitive linear deterministic demand. The entry stage is modeled as a simultaneous game, where the players take the outcomes of the subsequent post-entry (Cournot) competition into account in making their entry decisions. We derive expressions for prices and production quantities as functions of the number of entrants at each tier of a multitier chain. We characterize viability and stability of supply-chain structures and show, using lattice arguments, that there is always an equilibrium structure in pure strategies in the entry game. Finally, we examine the effects of vertical integration in the two-tier case. Altogether, the paper provides a framework for comparing a variety of supply-chain structures and for studying how they are affected by cost structures and by the number of entrants throughout the chain.",
@@ -214,6 +206,14 @@
           "en": "This paper measures the impact of vertically integrated and exclusive software on industry structure and welfare in the sixth-generation of the US video game industry (2000–2005). I specify and estimate a dynamic model of both consumer demand for hardware and software products, and software demand for hardware platforms. I use estimates to simulate market outcomes had platforms been unable to own or contract exclusively with software. Driven by increased software compatibility, hardware and software sales would have increased by 7 percent and 58 percent and consumer welfare by $1.5 billion. Gains would be realized only by the incumbent, suggesting exclusivity favored the entrant platforms. (JEL D12, L13, L22, L63, L86)",
           "zh": "本文测量了美国第六代电子游戏产业(2000-2005)中垂直整合和独家软件对产业结构和福利的影响。我指定并估计了消费者对硬件和软件产品的需求以及硬件平台的软件需求的动态模型。我使用估算来模拟平台无法拥有或独家承包软件的市场结果。由于软件兼容性的提高，硬件和软件的销售额将分别增长7%和58%，消费者福利将增加15亿美元。收益只会由在位者实现，这表明排他性有利于进入者平台。(jel 12, 13, 22, 63, 86)",
           "quote": "Lee R S. Vertical integration and exclusivity in platform and two-sided markets[J]. American Economic Review, 2013, 103(7): 2960-3000."
+        }
+      },
+      {
+        "title": "Vertical mergers: A survey of ex post evidence and ex ante evaluation methods",
+        "abstract": {
+          "en": "This article surveys recent empirical evidence on efficiencies and competitive harm that are associated with vertical mergers. It discusses both ex post or retrospective empirical studies that rely on post–merger data and ex ante or forecasting techniques that use premerger data. It develops the idea that although there is a need for vertical merger screening tools there are a number of problems that are associated with attempts to adapt horizontal screens to the vertical context. Mergers in the technology, media, and telecom sectors are emphasized because they tend to dominate contested vertical mergers.",
+          "zh": "本文调查了与垂直合并相关的效率和竞争危害的最新实证证据。它既讨论了依赖于合并后数据的事后或回顾性实证研究，也讨论了使用合并前数据的事前或预测技术。它发展了这样一种思想，即尽管需要垂直合并筛选工具，但在尝试使水平筛选适应垂直上下文时存在许多问题。技术、媒体和电信部门的合并受到强调，因为它们往往主导有争议的垂直合并。",
+          "quote": "Slade M E. Vertical mergers: A survey of ex post evidence and ex ante evaluation methods[J]. Review of Industrial Organization, 2021, 58(4): 493-511."
         }
       }
     ]
