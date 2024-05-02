@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed, reactive } from 'vue'
+import { useToast } from 'vue-toast-notification'
 import abstract from './abstract.json'
 
+const $toast = useToast()
 const lang = reactive(new Set('en'))
 const showEn = computed({
   get: () => lang.has('en'),
@@ -19,6 +21,23 @@ const showZh = computed({
       : lang.delete('zh')
   },
 })
+
+const total = abstract
+  .map(v => [v.title, ...v.reference.map(r => r.title)])
+  .flat(Number.POSITIVE_INFINITY)
+  .filter(a => !(a as string).startsWith('['))
+  .length
+
+function copyToClickBoard(content: string) {
+  navigator.clipboard.writeText(content)
+  $toast.success('复制到剪贴板', {
+    position: 'top',
+  })
+}
+
+function importantArticle(title: string) {
+  return title.startsWith('*') ? 'font-bold color-red' : ''
+}
 </script>
 
 <template>
@@ -39,9 +58,20 @@ const showZh = computed({
         >
         <label for="english-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 select-none">英文摘要</label>
       </div>
+      除当前已引用合计： {{ total }}
     </div>
-    <div v-for="article of abstract" :key="article.title" class="mx-auto max-w-250">
-      <h2>{{ article.title }}</h2>
+    <div v-for="article of abstract" :key="article.title" class="mx-auto max-w-230">
+      <h2 :class="importantArticle(article.title)">
+        {{ article.title }}
+        <button
+          v-if="article.abstract.quote"
+          type="button"
+          class="text-white bg-gradient-to-r border-none outline-none from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
+          @click="copyToClickBoard(article.abstract.quote)"
+        >
+          引用
+        </button>
+      </h2>
       <p v-show="showEn">
         {{ article.abstract.en }}
       </p>
@@ -56,9 +86,18 @@ const showZh = computed({
             v-if="subAbstract.abstract.url"
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
             :href="subAbstract.abstract.url"
+            target="_blank"
           >
-            link
+            原文
           </a>
+          <button
+            v-if="subAbstract.abstract.quote"
+            type="button"
+            class="text-white bg-gradient-to-r border-none outline-none from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-4 py-1 text-center"
+            @click="copyToClickBoard(subAbstract.abstract.quote)"
+          >
+            引用
+          </button>
         </h3>
 
         <p v-show="showEn">
