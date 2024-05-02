@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import { useToast } from 'vue-toast-notification'
 import abstract from './abstract.json'
 
@@ -35,9 +35,14 @@ function copyToClickBoard(content: string) {
   })
 }
 
-function importantArticle(title: string) {
-  return title.startsWith('*') ? 'font-bold color-red' : ''
-}
+const showFlat = ref(false)
+const abstractData = computed(() => {
+  return showFlat.value
+    ? abstract.map(v => [{ title: v.title, abstract: v.abstract }, ...v.reference])
+      .flat(Number.POSITIVE_INFINITY)
+      .filter(a => !((a as any).title).startsWith('[')) as typeof abstract
+    : abstract
+})
 </script>
 
 <template>
@@ -58,11 +63,17 @@ function importantArticle(title: string) {
         >
         <label for="english-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 select-none">英文摘要</label>
       </div>
+
+      <label class="inline-flex items-center cursor-pointer">
+        <input v-model="showFlat" type="checkbox" class="sr-only peer">
+        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">{{ showFlat ? '扁平' : '树状' }}</span>
+      </label>
       除当前已引用合计： {{ total }}
     </div>
-    <div v-for="article of abstract" :key="article.title" class="mx-auto max-w-230">
-      <h2 :class="importantArticle(article.title)">
-        {{ article.title }}
+    <div v-for="(article, index) of abstractData" :key="article.title" class="mx-auto max-w-230">
+      <h2 :class="{ 'text-base': showFlat, 'font-bold color-red': article.title.startsWith('*') }">
+        {{ index + 1 }}{{ article.title }}
         <button
           v-if="article.abstract.quote"
           type="button"
