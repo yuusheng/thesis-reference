@@ -48,7 +48,7 @@ const showZh = computed({
       <p v-show="showZh">
         {{ article.abstract.zh }}
       </p>
-      <strong>References:</strong>
+      <strong v-if="article.reference?.length">References:</strong>
       <div v-for="(subAbstract, index) in article.reference" :key="subAbstract.title" class="pl-10">
         <h3>
           {{ index + 1 }}. {{ subAbstract.title }}
@@ -65,7 +65,7 @@ const showZh = computed({
           {{ subAbstract.abstract.en }}
         </p>
         <p v-show="showZh">
-          {{ subAbstract.abstract.en }}
+          {{ subAbstract.abstract.zh }}
         </p>
       </div>
     </div>
