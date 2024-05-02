@@ -175,5 +175,23 @@
         }
       }
     ]
+  },
+  {
+    "title": "[36]. Vertical Integration and Foreclosure: Evidence from Production Network Data",
+    "abstract": {
+      "en": "This paper studies the prevalence of potential anticompetitive effects of vertical mergers using a novel data set on U.S. and international buyer-seller relationships and across a large range of industries. We find that relationships are more likely to break when suppliers vertically integrate with one of the buyers’ competitors than when they vertically integrate with an unrelated firm. This relationship holds for both domestic and cross-border mergers and for domestic and international relationships. It also holds when instrumenting mergers using exogenous downward pressure on the supplier’s stock prices, suggesting that reverse causality is unlikely to explain the result. In contrast, the relationship vanishes when using rumored or announced but not completed integration events. Firms experience a substantial drop in sales when one of their suppliers integrates with one of their competitors. This sales drop is mitigated if the firm has alternative suppliers in place. These findings are consistent with anticompetitive effects of vertical mergers, such as vertical foreclosure, rising input costs for rivals, or self-foreclosure.",
+      "zh": "本文研究了垂直并购的潜在反竞争效应的普遍性，使用了一套关于美国和国际买卖双方关系的新数据集，并跨越了大量行业。我们发现，当供应商与买家的竞争对手垂直整合时，关系更容易破裂，而当供应商与不相关的公司垂直整合时，关系更容易破裂。这种关系适用于国内和跨国合并，也适用于国内和国际关系。当利用供应商股价的外生下行压力来衡量并购时，这一结论也成立，表明反向因果关系不太可能解释这一结果。相反，当使用传闻或宣布但未完成的集成事件时，这种关系就消失了。当供应商与竞争对手合并时，公司的销售额就会大幅下降。如果公司有合适的替代供应商，这种销售下降就会得到缓解。这些发现与垂直合并的反竞争效应一致，如垂直止赎、竞争对手投入成本上升或自我止赎。",
+      "quote": "Boehm J, Sonntag J. Vertical integration and foreclosure: Evidence from production network data[J]. Management Science, 2023, 69(1): 141-161."
+    },
+    "reference": [
+      {
+        "title": "Do prices determine vertical integration?",
+        "abstract": {
+          "en": "A number of theories in organizational economics and industrial organization suggest that vertical integration, while costly, increases productivity. It follows from firms' maximizing behaviour that higher prices in the product market ought to induce more integration. Trade policy provides a source of exogenous price variation to assess this prediction: higher tariffs should lead to higher prices and, therefore, to more integration. We construct firm-level vertical integration indices for a large set of countries and industries and exploit variation in applied most-favoured-nation tariffs to examine the impact of tariffs on firm boundaries. The empirical results provide strong support for the view that higher output prices generate more vertical integration. Our estimates of the average price elasticity of vertical integration are in the range 0.4–2.",
+          "zh": "组织经济学和产业组织中的许多理论表明，垂直整合虽然成本高昂，但却能提高生产率。从企业的最大化行为可以得出，产品市场上较高的价格应该会导致更多的整合。贸易政策为评估这一预测提供了外生价格变动的来源:更高的关税应导致更高的价格，从而促进一体化。我们为大量国家和行业构建了企业层面的垂直整合指数，并利用最惠国关税的变化来检验关税对企业边界的影响。实证结果有力地支持了产出价格越高，垂直整合程度越高的观点。我们估计垂直整合的平均价格弹性在0.4-2之间。",
+          "quote": "Alfaro L, Conconi P, Fadinger H, et al. Do prices determine vertical integration?[J]. The Review of Economic Studies, 2016, 83(3): 855-888."
+        }
+      }
+    ]
   }
 ]
