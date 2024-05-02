@@ -73,7 +73,7 @@ const abstractData = computed(() => {
     </div>
     <div v-for="(article, index) of abstractData" :key="article.title" class="mx-auto max-w-230">
       <h2 :class="{ 'text-base': showFlat, 'font-bold color-red': article.title.startsWith('*') }">
-        {{ index + 1 }}{{ article.title }}
+        {{ `${index + 1}. ` }}{{ article.title }}
         <button
           v-if="article.abstract.quote"
           type="button"
